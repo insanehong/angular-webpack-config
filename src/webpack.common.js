@@ -412,9 +412,12 @@ const browserConfig = function(options, root, settings) {
        *
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
+
       new htmlWebpackPlugin({
         template: root(`${settings.paths.src.client.root}/index.html`),
-        chunksSortMode: 'dependency'
+        filename: '../index.html',
+        chunksSortMode: 'dependency',
+        inject: 'body'
       }),
 
       /**
