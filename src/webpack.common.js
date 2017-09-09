@@ -385,14 +385,14 @@ const browserConfig = function(options, root, settings) {
             {
               loader: 'file-loader',
               options: {
-                name: 'assets/[name].[hash].[ext]'
+                name: `${settings.publicPaths.assets}[name].[hash].[ext]`
               }
             }
           ]
         },
 
         /**
-         * file-loader for  fonts
+         * file-loader for fonts
          *
          * See: https://github.com/webpack-contrib/file-loader
          */
@@ -402,7 +402,7 @@ const browserConfig = function(options, root, settings) {
             {
               loader: 'file-loader',
               options: {
-                name: 'assets/[name].[hash].[ext]'
+                name: `${settings.publicPaths.assets}[name].[hash].[ext]`
               }
             }
           ]
